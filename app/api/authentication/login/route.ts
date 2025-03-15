@@ -5,6 +5,7 @@ import { connectDB } from "@/lib/db";
 import { User } from "@/entities/User";
 
 const SECRET_KEY = process.env.JWT_SECRET || "your_secret_key"; // Change this in production
+const REFRESH_SECRET_KEY = process.env.JWT_REFRESH_SECRET || "your_refresh_secret_key";
 
 export async function POST(req: Request) {
   try {
@@ -26,7 +27,7 @@ export async function POST(req: Request) {
 
     // Generate JWT token
     const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY, { expiresIn: "1h" });
-    const refreshToken = jwt.sign({ }, SECRET_KEY, { expiresIn: "7d" });
+    const refreshToken = jwt.sign({ id: user.id, email: user.email }, REFRESH_SECRET_KEY, { expiresIn: "7d" });
 
     return NextResponse.json({ token, refreshToken }, { status: 200 });
   } catch (error) {

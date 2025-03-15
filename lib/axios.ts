@@ -57,7 +57,7 @@ authenticatedRequest.interceptors.response.use(
       currentRequest._retry = true;
 
       try {
-        const refreshResponse = await request.get("/refresh-access-token");
+        const refreshResponse = await request.get("api/authentication/refresh-access-token");
         const newAccessToken = refreshResponse.data.accessToken;
 
         // Save new token and retry original request

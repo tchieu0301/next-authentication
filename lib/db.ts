@@ -12,8 +12,8 @@ export const AppDataSource = new DataSource({
   username: process.env.DATABASE_USER || "root",
   password: process.env.DATABASE_PASSWORD || "123456",
   database: process.env.DATABASE_NAME || "next-authentication",
-  entities: [User], // Entity files
-  synchronize: true, // Auto-sync DB structure (set to false in production)
+  entities: [User],
+  synchronize: true, //set to false in production
   logging: false,
 });
 
