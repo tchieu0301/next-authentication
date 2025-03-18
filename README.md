@@ -11,7 +11,7 @@ Ví dụ:
 5️⃣ Vào file db.ts để sửa đổi thông tin database giống với thông tin mà bạn đã thiết lập
 
 ### Clone dự án:
-```
+```terminal
 git clone https://github.com/tchieu0301/next-authentication.git
 ```
 
