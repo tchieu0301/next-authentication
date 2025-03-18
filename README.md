@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## NextJS Authentication.
 
-## Getting Started
+### Kết nối Database:
+1. Truy cập https://www.heidisql.com/download.php
+2. Tải phiên bản mới nhất
+3. Mở HeidiSQL lên và thiết lập thông tin host:
+Ví dụ:
+![Alt text](/public/readme/step_1.png)
+4. Tiếp theo mở host lên và tạo database tên next-authentication
+![Alt text](/public/readme/step_2.png)
+5. Vào file db.ts để sửa đổi thông tin database giống với thông tin mà bạn đã thiết lập
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Các URL Endpoint:
+1. <p><code style="background: #333; color: #fff; padding: 2px 6px; border-radius: 4px;">/register</code></p>
+- URL để kiểm tra chức năng đăng ký.
+- Các trường trong phần đăng ký bao gồm: email, password, first_name, last_name.
+- Bao gồm validation cơ bản cho các trường.
